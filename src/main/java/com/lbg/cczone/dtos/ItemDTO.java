@@ -14,6 +14,8 @@ public class ItemDTO {
 
 	private Integer cartId;
 
+	private String image;
+
 	public ItemDTO(Item item) {
 		super();
 		this.setId(item.getId());
@@ -67,6 +69,14 @@ public class ItemDTO {
 
 	public void setCartId(Integer cartId) {
 		this.cartId = cartId;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }
