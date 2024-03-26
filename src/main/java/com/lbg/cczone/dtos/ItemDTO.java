@@ -23,6 +23,10 @@ public class ItemDTO {
 		if (item.getCart() != null) {
 			this.setCartId(item.getCart().getId());
 		}
+		// Added else to set cartId to value that is not null
+		else {
+			this.setCartId(100);
+		}
 	}
 
 	public ItemDTO() {
