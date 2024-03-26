@@ -25,13 +25,13 @@ import jakarta.servlet.http.HttpServletRequest;
 public class JwtUtils {
 	private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-	@Value("${cczone.app.jwtSecret}")
+	@Value("secret")
 	private String jwtSecret;
 
-	@Value("${cczone.app.jwtExpirationMs}")
+	@Value("86400")
 	private int jwtExpirationMs;
 
-	@Value("${cczone.app.jwtCookieName}")
+	@Value("cookie")
 	private String jwtCookie;
 
 	public String getJwtFromCookies(HttpServletRequest request) {
