@@ -56,7 +56,7 @@ public class ItemController {
 		return this.service.deleteItem(id);
 	}
 
-	@PatchMapping("add/{itemId}/{basketId}")
+	@PatchMapping("add/{itemId}/{cartId}")
 	public ResponseEntity<Object> addToCart(@PathVariable Integer itemId, @PathVariable Integer cartId) {
 		return this.service.addToCart(itemId, cartId);
 
