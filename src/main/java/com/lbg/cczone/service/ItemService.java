@@ -63,12 +63,12 @@ public class ItemService {
 			return new ResponseEntity<Item>(HttpStatus.NOT_FOUND);
 		}
 		Item existing = found.get();
-//		if (item.getItemName() != null) {
-//			existing.setItemName(item.getItemName());
-//		}
-//		if (item.getItemPrice() != null) {
-//			existing.setItemPrice(item.getItemPrice());
-//		}
+		if (item.getItemName() != null) {
+			existing.setItemName(item.getItemName());
+		}
+		if (item.getItemPrice() != null) {
+			existing.setItemPrice(item.getItemPrice());
+		}
 		if (item.getItemQuantity() != null) {
 			existing.setItemQuantity(item.getItemQuantity());
 		}
