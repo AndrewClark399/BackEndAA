@@ -13,6 +13,7 @@ public class ItemDTO {
 	private Integer itemQuantity;
 
 	private Integer cartId;
+	private String image;
 
 	public ItemDTO(Item item) {
 		super();
@@ -71,6 +72,14 @@ public class ItemDTO {
 
 	public void setCartId(Integer cartId) {
 		this.cartId = cartId;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

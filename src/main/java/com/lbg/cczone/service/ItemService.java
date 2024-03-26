@@ -41,6 +41,7 @@ public class ItemService {
 			if (item.getCart() != null) {
 				dto.setCartId(item.getCart().getId());
 			}
+			dto.setImage(item.getImage());
 			dtos.add(dto);
 
 		}
