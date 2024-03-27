@@ -66,6 +66,9 @@ public class CartService {
 		if (cart.getItems() != null) {
 			existing.setItems(cart.getItems());
 		}
+		if (cart.getBuyer() != null) {
+			existing.setBuyer(cart.getBuyer());
+		}
 
 		Cart updated = this.repo.save(existing);
 		return ResponseEntity.ok(updated);

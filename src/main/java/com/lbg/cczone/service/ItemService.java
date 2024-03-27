@@ -38,6 +38,7 @@ public class ItemService {
 			dto.setItemName(item.getItemName());
 			dto.setItemPrice(item.getItemPrice());
 			dto.setItemQuantity(item.getItemQuantity());
+			dto.setImage(item.getImage());
 			if (item.getCart() != null) {
 				dto.setCartId(item.getCart().getId());
 			}

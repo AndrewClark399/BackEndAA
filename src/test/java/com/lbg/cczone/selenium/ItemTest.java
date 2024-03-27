@@ -40,13 +40,13 @@ public class ItemTest {
 	void createItemPage() {
 		this.driver.get("http://localhost:3000/item");
 
-		WebElement newItemName = this.driver.findElement(By.id("itemName"));
+		WebElement newItemName = this.driver.findElement(By.cssSelector("root > div > form > input:nth-child(3)"));
 		newItemName.sendKeys("Biscuit");
 
-		WebElement newItemPrice = this.driver.findElement(By.id("itemPrice"));
+		WebElement newItemPrice = this.driver.findElement(By.cssSelector("root > div > form > input:nth-child(6)"));
 		newItemPrice.sendKeys("4.50");
 
-		WebElement newItemQuantity = this.driver.findElement(By.id("itemQuantity"));
+		WebElement newItemQuantity = this.driver.findElement(By.cssSelector("#root > div > form > input:nth-child(9)"));
 		newItemQuantity.sendKeys("5");
 
 		WebElement submit = this.driver.findElement(By.id("itemSubmit"));
