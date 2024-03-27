@@ -13,6 +13,7 @@ public class ItemDTO {
 	private Integer itemQuantity;
 
 	private Integer cartId;
+	private String image;
 
 	public ItemDTO(Item item) {
 		super();
@@ -22,6 +23,10 @@ public class ItemDTO {
 		this.setItemQuantity(item.getItemQuantity());
 		if (item.getCart() != null) {
 			this.setCartId(item.getCart().getId());
+		}
+		// Added else to set cartId to value that is not null
+		else {
+			this.setCartId(100);
 		}
 	}
 
@@ -67,6 +72,14 @@ public class ItemDTO {
 
 	public void setCartId(Integer cartId) {
 		this.cartId = cartId;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 }

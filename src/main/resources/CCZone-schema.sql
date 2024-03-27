@@ -9,5 +9,6 @@ CREATE TABLE `item`(
 `item_name` VARCHAR(100),
 `item_price` DOUBLE,
 `item_quantity` INT,
+`image` VARCHAR(255),
 `cart_id` INT,
 FOREIGN KEY (`cart_id`) REFERENCES `cart`(`id`));
