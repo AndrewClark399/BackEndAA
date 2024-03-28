@@ -63,29 +63,30 @@ public class ItemService {
 		return new ResponseEntity<Item>(created, HttpStatus.CREATED);
 	}
 
-	public ResponseEntity<Item> updateItem(int id, Item item) {
-		Optional<Item> found = this.repo.findById(id);
-		if (found.isEmpty()) {
-			return new ResponseEntity<Item>(HttpStatus.NOT_FOUND);
-		}
-		Item existing = found.get();
-		if (item.getItemName() != null) {
-			existing.setItemName(item.getItemName());
-		}
-		if (item.getItemPrice() != null) {
-			existing.setItemPrice(item.getItemPrice());
-		}
-		if (item.getItemQuantity() != null) {
-			existing.setItemQuantity(item.getItemQuantity());
-		}
-		if (item.getCart() != null) {
-			existing.setCart(item.getCart());
-		}
-
-		Item updated = this.repo.save(existing);
-		return ResponseEntity.ok(updated);
-
-	}
+	// Not currently in use
+//	public ResponseEntity<Item> updateItem(int id, Item item) {
+//		Optional<Item> found = this.repo.findById(id);
+//		if (found.isEmpty()) {
+//			return new ResponseEntity<Item>(HttpStatus.NOT_FOUND);
+//		}
+//		Item existing = found.get();
+//		if (item.getItemName() != null) {
+//			existing.setItemName(item.getItemName());
+//		}
+//		if (item.getItemPrice() != null) {
+//			existing.setItemPrice(item.getItemPrice());
+//		}
+//		if (item.getItemQuantity() != null) {
+//			existing.setItemQuantity(item.getItemQuantity());
+//		}
+//		if (item.getCart() != null) {
+//			existing.setCart(item.getCart());
+//		}
+//
+//		Item updated = this.repo.save(existing);
+//		return ResponseEntity.ok(updated);
+//
+//	}
 
 	public boolean deleteItem(int id) {
 		this.repo.deleteById(id);
@@ -108,9 +109,9 @@ public class ItemService {
 
 		Optional<Cart> cart = this.cartRepo.findById(cartId);
 
-		if (cart.isEmpty()) {
-			return new ResponseEntity<Object>("This cart doesn't exist", HttpStatus.BAD_REQUEST);
-		}
+//		if (cart.isEmpty()) {
+//			return new ResponseEntity<Object>("This cart doesn't exist", HttpStatus.BAD_REQUEST);
+//		}
 
 		existing.setCart(cart.get());
 

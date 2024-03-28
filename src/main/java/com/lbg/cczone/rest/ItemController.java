@@ -46,10 +46,10 @@ public class ItemController {
 		return this.service.createItem(item);
 	}
 
-	@PatchMapping("/update/{id}")
-	public ResponseEntity<Item> updateItem(@PathVariable int id, @RequestBody Item item) {
-		return this.service.updateItem(id, item);
-	}
+//	@PatchMapping("/update/{id}")
+//	public ResponseEntity<Item> updateItem(@PathVariable int id, @RequestBody Item item) {
+//		return this.service.updateItem(id, item);
+//	}
 
 	@DeleteMapping("delete/{id}")
 	public boolean deleteItem(@PathVariable int id) {
